@@ -27,7 +27,7 @@ def gsolve(Z: np.ndarray, B: np.ndarray, l: int, w) -> (np.ndarray, np.ndarray):
     '''
 
     N, P = Z.shape
-
+    
     n = 256
     A = scipy.sparse.lil_matrix(((N * P) + n + 1, n + P), dtype='double') # init lil
     b = np.zeros((A.shape[0], 1), dtype='double')
